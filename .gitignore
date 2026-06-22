@@ -1,18 +1,49 @@
-# Build directories
+# ========================= Build outputs =========================
 build/
 out/
+x64/
+[Dd]ebug/
+[Rr]elease/
+ipch/
 
-# Visual Studio files
+# ========================= Visual Studio =========================
 *.sln
 *.vcxproj*
 *.suo
 *.user
-[Dd]ebug/
-[Rr]elease/
-x64/
-ipch/
 .vs/
 
-# Other
+# ========================= Large / local-only artifacts =========================
+# ONNX model (~500MB+) — export locally, never commit
+models/*.onnx
+models/**/*.onnx
+*.onnx
+
+# Nsight reports (large, regenerable)
+*.ncu-rep
+profile/
+profile/**
+
+# Reference tensors / binary inputs (if present locally)
+reference_data/
+reference_data/**
+
+# ========================= Logs & temp =========================
 *.log
+ncu_full.log
 *.tmp
+
+# ========================= OS / editor =========================
+.DS_Store
+Thumbs.db
+*.swp
+*~
+
+# ========================= CUDA / binaries (if copied locally) =========================
+*.exe
+*.dll
+*.pdb
+*.obj
+*.lib
+*.exp
+*.ilk
