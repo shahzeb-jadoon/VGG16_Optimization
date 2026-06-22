@@ -1,6 +1,6 @@
 # VGG-16 CUDA Optimization
 
-**CMPE 755 · High Performance Architectures · RIT · Spring 2025**
+**High Performance Architectures**
 
 Custom CUDA C++ inference for VGG-16 on **NVIDIA GeForce RTX GPU** (CC 8.6, 16 GB VRAM), using cuDNN (conv), cuBLAS (FC), and hand-written kernels (shared-memory tiling, memory coalescing, kernel fusion). Profiled with **NVIDIA Nsight Compute**.
 
